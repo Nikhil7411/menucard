@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS Crave Kitchen Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            border-radius: 15px 15px 0 0;
+            margin: -20px -20px 30px -20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .contact {
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .menu-section {
+            margin-bottom: 40px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, #4834d4, #686de0);
+            color: white;
+            padding: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .item-name {
+            font-weight: 600;
+            color: #333;
+            flex: 1;
+        }
+
+        .item-price {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-left: 10px;
+        }
+
+        .biryani-special {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-left: 5px solid #ff6b6b;
+        }
+
+        .combo-special {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-left: 5px solid #ff9ff3;
+        }
+
+        .size-info {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            border-radius: 0 0 15px 15px;
+            margin: 30px -20px -20px -20px;
+        }
+
+        .footer h3 {
+            margin-bottom: 10px;
+            color: #ecf0f1;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .menu-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                padding: 15px;
+            }
+            
+            .menu-item {
+                padding: 10px 12px;
+            }
+        }
+
+        .special-note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍽️ SS Crave Kitchen</h1>
+            <p><strong>Taste The Difference</strong></p>
+            <div class="contact">
+                <p>📞 Contact: 6309639999, 6309479845</p>
+            </div>
+        </div>
+
+        <!-- Veg Starters -->
+        <div class="menu-section">
+            <div class="section-header">🥗 Veg Starters</div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <span class="item-name">Baby Corn Starters</span>
+                    <span class="item-price">₹119</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Paneer Starters</span>
+                    <span class="item-price">₹129</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Veg Manchuria</span>
+                    <span class="item-price">₹129</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Veg 65</span>
+                    <span class="item-price">₹129</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chilli Veg</span>
+                    <span class="item-price">₹139</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Gobi Manchuria</span>
+                    <span class="item-price">₹139</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Gobi 65</span>
+                    <span class="item-price">₹149</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Paneer Manchuria</span>
+                    <span class="item-price">₹169</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Paneer 65</span>
+                    <span class="item-price">₹179</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chilli Paneer</span>
+                    <span class="item-price">₹179</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chilli Garlic Paneer</span>
+                    <span class="item-price">₹189</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Schezwan Paneer</span>
+                    <span class="item-price">₹139</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Paneer Majestic</span>
+                    <span class="item-price">₹149</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Baby Corn Manchuria</span>
+                    <span class="item-price">₹169</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Baby Corn 65</span>
+                    <span class="item-price">₹189</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chilli Baby Corn</span>
+                    <span class="item-price">₹139</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Baby Corn Majestic</span>
+                    <span class="item-price">₹149</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Mushroom Manchuria</span>
+                    <span class="item-price">₹169</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Mushroom 65</span>
+                    <span class="item-price">₹139</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chilli Mushroom</span>
+                    <span class="item-price">₹149</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Egg Starters -->
+        <div class="menu-section">
+            <div class="section-header">🥚 Egg Starters</div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <span class="item-name">Egg Manchuria</span>
+                    <span class="item-price">₹129</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Egg 65</span>
+                    <span class="item-price">₹149</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chilli Egg</span>
+                    <span class="item-price">₹159</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Egg Roast</span>
+                    <span class="item-price">₹109</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Egg Schezwan</span>
+                    <span class="item-price">₹169</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Non-Veg Starters -->
+        <div class="menu-section">
+            <div class="section-header">🍗 Non-Veg Starters</div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <span class="item-name">Chicken Manchuria</span>
+                    <span class="item-price">₹159</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chicken 65</span>
+                    <span class="item-price">₹169</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chilli Chicken</span>
+                    <span class="item-price">₹179</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Butan Chicken</span>
+                    <span class="item-price">₹189</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chicken Majestic</span>
+                    <span class="item-price">₹209</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chicken 555</span>
+                    <span class="item-price">₹209</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chicken Lollipops</span>
+                    <span class="item-price">₹229</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chicken Drumsticks</span>
+                    <span class="item-price">₹209</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Lemon Chicken</span>
+                    <span class="item-price">₹209</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Dragon Chicken</span>
+                    <span class="item-price">₹219</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Pepper Chicken</span>
+                    <span class="item-price">₹199</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Ginger Chicken</span>
+                    <span class="item-price">₹229</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Garlic Chicken</span>
+                    <span class="item-price">₹219</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Apollo Fish</span>
+                    <span class="item-price">₹229</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Fish Manchuria</span>
+                    <span class="item-price">₹219</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Fish 65</span>
+                    <span class="item-price">₹229</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chilli Fish</span>
+                    <span class="item-price">₹229</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Prawns Manchuria</span>
+                    <span class="item-price">₹219</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Prawns 65</span>
+                    <span class="item-price">₹229</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Loose Prawns</span>
+                    <span class="item-price">₹239</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chinese Rice -->
+        <div class="menu-section">
+            <div class="section-header">🍚 Chinese Rice</div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <span class="item-name">Veg Rice</span>
+                    <span class="item-price">₹79</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Veg Soft Rice</span>
+                    <span class="item-price">₹79</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Veg Schezwan Rice</span>
+                    <span class="item-price">₹89</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Veg Manchuria Rice</span>
+                    <span class="item-price">₹99</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Veg Chilli Garlic Rice</span>
+                    <span class="item-price">₹99</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Paneer Rice</span>
+                    <span class="item-price">₹109</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Paneer Schezwan Rice</span>
+                    <span class="item-price">₹109</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Kaju Paneer Rice</span>
+                    <span class="item-price">₹119</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Mushroom Rice</span>
+                    <span class="item-price">₹109</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Egg Rice</span>
+                    <span class="item-price">₹89</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Egg Soft Rice</span>
+                    <span class="item-price">₹89</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Egg Schezwan Rice</span>
+                    <span class="item-price">₹119</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">DOB Egg Rice</span>
+                    <span class="item-price">₹99</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Egg Chilli Garlic Rice</span>
+                    <span class="item-price">₹109</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chicken Fried Rice</span>
+                    <span class="item-price">₹99</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chicken Soft Rice</span>
+                    <span class="item-price">₹99</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">DOB Egg Chkn Rice</span>
+                    <span class="item-price">₹109</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">DOB Chicken Rice</span>
+                    <span class="item-price">₹119</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">DOB Egg DOB Chkn Rice</span>
+                    <span class="item-price">₹129</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chkn Schezwan Rice</span>
+                    <span class="item-price">₹109</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chilli Garlic Chkn Rice</span>
+                    <span class="item-price">₹109</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chinese Noodles -->
+        <div class="menu-section">
+            <div class="section-header">🍜 Chinese Noodles</div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <span class="item-name">Veg Noodles</span>
+                    <span class="item-price">₹79</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Veg Soft Noodles</span>
+                    <span class="item-price">₹79</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Veg Schezwan Noodles</span>
+                    <span class="item-price">₹89</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Veg Manchuria Noodles</span>
+                    <span class="item-price">₹99</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Veg Chilli Garlic Noodles</span>
+                    <span class="item-price">₹99</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Paneer Noodles</span>
+                    <span class="item-price">₹109</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Paneer Schezwan Noodles</span>
+                    <span class="item-price">₹109</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Kaju Paneer Noodles</span>
+                    <span class="item-price">₹119</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Mushroom Noodles</span>
+                    <span class="item-price">₹109</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Egg Noodles</span>
+                    <span class="item-price">₹89</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Egg Soft Noodles</span>
+                    <span class="item-price">₹89</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Egg Schezwan Noodles</span>
+                    <span class="item-price">₹119</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">DOB Egg Noodles</span>
+                    <span class="item-price">₹99</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Egg Chilli Garlic Noodles</span>
+                    <span class="item-price">₹109</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chicken Noodles</span>
+                    <span class="item-price">₹99</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chicken Soft Noodles</span>
+                    <span class="item-price">₹99</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">DOB Egg Chkn Noodles</span>
+                    <span class="item-price">₹109</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">DOB Chicken Noodles</span>
+                    <span class="item-price">₹119</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">DOB Egg DOB Chkn Noodles</span>
+                    <span class="item-price">₹129</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chkn Schezwan Noodles</span>
+                    <span class="item-price">₹109</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Chilli Garlic Chkn Noodles</span>
+                    <span class="item-price">₹109</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Biryani -->
+        <div class="menu-section">
+            <div class="section-header">🍛 Biryani Specials</div>
+            <div class="menu-grid">
+                <div class="menu-item biryani-special">
+                    <span class="item-name">Veg Biryani<br><span class="size-info">Single/Full</span></span>
+                    <span class="item-price">₹119/229</span>
+                </div>
+                <div class="menu-item biryani-special">
+                    <span class="item-name">Paneer Biryani<br><span class="size-info">Single/Full</span></span>
+                    <span class="item-price">₹179/339</span>
+                </div>
+                <div class="menu-item biryani-special">
+                    <span class="item-name">Kaju Paneer Biryani<br><span class="size-info">Single/Full</span></span>
+                    <span class="item-price">₹189/359</span>
+                </div>
+                <div class="menu-item biryani-special">
+                    <span class="item-name">Mushroom Biryani<br><span class="size-info">Single/Full</span></span>
+                    <span class="item-price">₹179/339</span>
+                </div>
+                <div class="menu-item biryani-special">
+                    <span class="item-name">Chicken Biryani<br><span class="size-info">Single/Full</span></span>
+                    <span class="item-price">₹119/229</span>
+                </div>
+                <div class="menu-item biryani-special">
+                    <span class="item-name">Chicken Fry Piece Biryani<br><span class="size-info">S/F/Fam/Jumbo</span></span>
+                    <span class="item-price">₹119/229/549/799</span>
+                </div>
+                <div class="menu-item biryani-special">
+                    <span class="item-name">Chicken 65 Biryani<br><span class="size-info">S/F/Fam/Jumbo</span></span>
+                    <span class="item-price">₹139/259/599/879</span>
+                </div>
+                <div class="menu-item biryani-special">
+                    <span class="item-name">Moghilai Biryani<br><span class="size-info">S/F/Fam/Jumbo</span></span>
+                    <span class="item-price">₹179/339/729/1049</span>
+                </div>
+                <div class="menu-item biryani-special">
+                    <span class="item-name">Lollipop Biryani</span>
+                    <span class="item-price">₹359</span>
+                </div>
+                <div class="menu-item biryani-special">
+                    <span class="item-name">Egg Biryani</span>
+                    <span class="item-price">₹349</span>
+                </div>
+                <div class="menu-item biryani-special">
+                    <span class="item-name">Fish Biryani</span>
+                    <span class="item-price">₹349</span>
+                </div>
+                <div class="menu-item biryani-special">
+                    <span class="item-name">Prawns Biryani</span>
+                    <span class="item-price">₹349</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Extra Biryani Rice</span>
+                    <span class="item-price">₹79</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Extra Chicken Piece</span>
+                    <span class="item-price">₹59</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Extra Boiled Egg</span>
+                    <span class="item-price">₹15</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Roti & Curries -->
+        <div class="menu-section">
+            <div class="section-header">🫓 Roti & Curries</div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <span class="item-name">Chapati (Each/2)</span>
+                    <span class="item-price">₹15/25</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Phulka (Each/2)</span>
+                    <span class="item-price">₹15/25</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Parota (Each/2)</span>
+                    <span class="item-price">₹20/35</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Kadai Veg</span>
+                    <span class="item-price">₹169</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Malai Kofta Curry</span>
+                    <span class="item-price">₹199</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Mixed Veg Curry</span>
+                    <span class="item-price">₹159</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Kadai Paneer</span>
+                    <span class="item-price">₹169</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Paneer Butter Masala</span>
+                    <span class="item-price">₹179</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Kaju Paneer</span>
+                    <span class="item-price">₹
