@@ -4,7 +4,8 @@ const todayOffers = [
   "₹149 Paneer Biryani + Butter Naan 🍛",
   "₹99 Veg Fried Rice + Sweet Lassi 🥗🍶",
   "₹179 Chicken 65 + Egg Fried Rice 🍗🍳",
-  "₹199 Family Combo (2 Biryani + 2 Drinks) 🍽️🥤"
+  "₹199 Family Combo (2 Biryani + 2 Drinks) 🍽️🥤",
+  "DemoCheck1"
 ];
 
 // === Script to display offers ===
