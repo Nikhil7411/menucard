@@ -5,7 +5,7 @@ const todayOffers = [
   "₹99 Veg Fried Rice + Sweet Lassi 🥗🍶",
   "₹179 Chicken 65 + Egg Fried Rice 🍗🍳",
   "₹199 Family Combo (2 Biryani + 2 Drinks) 🍽️🥤",
-  "DemoCheck1"
+  "₹49 Special Idly (2pcs) + Sambar 🥣",
 ];
 
 // === Script to display offers ===
